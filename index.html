@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	  <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+         h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+          input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        #popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        #popupMessage {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+<h1> User Details Form</h1>
+
+<form id="user form">
+  <label for="firstname">First name:</label><br>
+  <input type="text" id="firstname" value="" maxlength="15"><br><br>
+
+  <label for="lastname">Last name:</label><br>
+  <input type="text" id="lastname" value="" maxlength="15"><br><br>
+
+  <label for="phone">phone number:</label><br>
+  <input type="tel" id="phone" name="phone" maxlength="20"><br><br/>
+
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email"><br><br/>
+
+  <label for="address">Address:</label><br>
+  <input type="text" id="address" value="" maxlength="100"><br><br>
+
+  <label for="age">Age:</label><br>
+  <input type="number" id="age" name="age"><br><br>
+
+<p2> Gender <p2/><br><br/>
+  <input type="radio" id="Gender"  value="Male">
+  <label for="Gender">Male</label><br>
+  <input type="radio" id="Gender"  value="Female">
+  <label for="Gender">Female</label><br/>
+
+  <input type="submit" value="Submit">
+</form> 
+   
+    <div id="popup" style="display:none;">
+        <p id="popupMessage"></p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

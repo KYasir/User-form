@@ -36,7 +36,7 @@ document.getElementById('user form').addEventListener('submit', function(event) 
         messages.push('Please enter a valid age.');
     }
     
-    const phonePattern = /^\d{10}$/;
+    const phonePattern = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/; 
     if (!phone.match(phonePattern)) {
         valid = false;
         messages.push('Phone number must be 10 digits.');
@@ -54,7 +54,7 @@ document.getElementById('user form').addEventListener('submit', function(event) 
 
  document.getElementById('popupMessage').innerText = 'Form submitted successfully!';
     document.getElementById('popup').style.display = 'block';
-};
+});
 
 function closePopup() {
     document.getElementById('popup').style.display = 'none';
